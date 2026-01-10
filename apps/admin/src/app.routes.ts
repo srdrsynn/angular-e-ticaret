@@ -2,8 +2,8 @@ import { Route } from '@angular/router';
 
 export const appRoutes: Route[] = [
     {
-        path: "",
-        loadChildren: () => import("./pages/login/login")
+        path: "login",
+        loadComponent: () => import("./pages/login/login")
     },
     {
         path: "",
@@ -11,7 +11,7 @@ export const appRoutes: Route[] = [
         children: [
             {
                 path: "",
-                loadChildren: () => import("./pages/home/home")
+                loadComponent: () => import("./pages/home/home")
             },
 
         ]
